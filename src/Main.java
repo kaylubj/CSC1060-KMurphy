@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) {
        Scanner input = new Scanner(System.in);
        Random random = new Random();
-       //Makes a new random number generator named "random"
+       //Makes a new random number generator named "random".
        int randomNumber = random.nextInt(100) + 1;
        //Assigns the random number it generates to randomNumber (the variable)
 
