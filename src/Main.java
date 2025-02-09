@@ -1,3 +1,9 @@
+/*
+Kaylub Murphy
+02/09/2025
+Purpose: To create an interactive greeter
+ */
+
 import java.util.Scanner;
 
 public class Main {
@@ -21,11 +27,11 @@ public class Main {
         System.out.print("That's cool! What's your favorite activity? ");
         activity = input.nextLine();
 
-        System.out.print("That's great! How much would you like to donate? ");
+        System.out.print("That's great! How much would you like to donate?\n$");
         donate = input.nextLine();
 
-        System.out.println("Your name is " + name + ", you are from " + location +
-                ", you are " + age + " years old, you enjoy " + activity +
-                ",\nand would like to donate $" + donate + ".");
+        System.out.println("Nice to meet you " + name + " from " + location +
+                "! I hope you have been enjoying being " + age + " years old, and I hope you have been able to have a lot of fun " + activity +
+                "!\nThank you for your $" + donate + " donation!");
     }
 }
