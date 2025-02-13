@@ -1,7 +1,7 @@
 /*
 Kaylub Murphy
 02/12/25
-Purpose: Learn to use separate functions and have them pass info back and forth
+Purpose: Learn to use separate functions and have them pass info back and forth.
  */
 
 import java.util.Scanner;
