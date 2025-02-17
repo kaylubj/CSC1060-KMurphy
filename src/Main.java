@@ -1,7 +1,7 @@
 /*
 Kaylub Murphy
 02/12/25
-Purpose: Practice working with conditionals
+Purpose: Practice working with conditionals.
  */
 
 import java.util.Scanner;
