@@ -9,7 +9,7 @@ public class Main {
             int sum = (x + y);
             System.out.print(x + " + " + y + " = " + sum + "\n");
             x = sum;
-            y = y+1;
+            y = y + 1;
         }
     }
 
