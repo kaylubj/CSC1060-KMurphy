@@ -4,8 +4,6 @@ Kaylub Murphy
 Purpose: Create a program that checks whether a string is a palindrome
  */
 
-import java.util.Arrays;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
