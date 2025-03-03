@@ -8,21 +8,20 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void isPalindrome(String yesOrNo){
+    public static void isPalindrome(String yesOrNo) {
         StringBuilder sBuild = new StringBuilder();
 
-        for (char c: yesOrNo.toCharArray()){
-            if (Character.isLetterOrDigit(c)){
+        for (char c : yesOrNo.toCharArray()) {
+            if (Character.isLetterOrDigit(c)) {
                 sBuild.append(c);
             }
         }
 
         String forward = sBuild.toString();
         String reversed = sBuild.reverse().toString();
-        if (forward.equals(reversed)){
+        if (forward.equals(reversed)) {
             System.out.println("This is a palindrome!");
-        }
-        else{
+        } else {
             System.out.println("This is not a palindrome!");
         }
     }
