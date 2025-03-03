@@ -83,7 +83,7 @@ public class Main {
                 i++;
             } else {
                 //If they can't then it'll ask them to try again
-                System.out.println("You can't spell that! Let's try that again: ");
+                System.out.print("You can't spell that! Let's try that again: ");
                 userInput = input.nextLine().toUpperCase();
             }
         }
