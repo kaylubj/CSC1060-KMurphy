@@ -57,8 +57,11 @@ public class Main {
         while (matcher.find()){
             //The number is extracted as a string and added to a group called number
             String number = matcher.group();
+            //This checks if the number is already on the map. If it is then it adds increments
+            //it's associated value on the map by 1. Otherwise, it sets the initial count to 1
             numCount2.put(number, numCount2.getOrDefault(number, 0) +1);
         }
+        //Returns the map created.
         return numCount2;
     }
     public static Map <Character, Integer> letterCountMethod(String numOfLetters){
