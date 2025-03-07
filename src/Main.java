@@ -19,7 +19,7 @@ public class Main {
                 "\n" +
                 "Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this.\n" +
                 "\n" +
-                "But, in a larger sense, we can not dedicated ”we can not consecrate”we can not hallow”this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced. It is rather for us to be here dedicated to the great task remaining before usâ€”that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotional”that we here highly resolve that these dead shall not have died in vain”that this nation, under God, shall have a new birth of freedom”and that government of the people, by the people, for the people, shall not perish from the earth.\n" +
+                "But, in a larger sense, we can not dedicated ”we can not consecrate”we can not hallow”this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced. It is rather for us to be here dedicated to the great task remaining before us - that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotional”that we here highly resolve that these dead shall not have died in vain”that this nation, under God, shall have a new birth of freedom”and that government of the people, by the people, for the people, shall not perish from the earth.\n" +
                 "\n" +
                 "Abraham Lincoln\n" +
                 "\n" +
@@ -64,15 +64,31 @@ public class Main {
         //Returns the map created.
         return numCount2;
     }
+
+    //Creates a method that accepts ga and turns it into a hashmap. The hashmap counts each
+    //time each number appears. This is similar to numCountMethod
     public static Map <Character, Integer> letterCountMethod(String numOfLetters){
+        //Creates a new hashmap that associates individual characters with integers. This
+        //map is named letterCount2 to illustrate that it is a separate hashmap, though the
+        //data in this hashmap will be sent back to letterCount1, so they will end up the same
         Map<Character, Integer> letterCount2 = new HashMap<>();
 
+        //An enhanced for loop. It converts each character in the string to a character
+        //array called c
         for (char c : numOfLetters.toCharArray()){
+            //if loop checks each character. It runs each time it detects that c is a letter
+            //and not a number of symbol
             if (Character.isLetter(c)){
-                c = Character.toLowerCase(c);
+                //Starts by converting c to lowercase. This way it only needs to keep count
+                //of the number of times numbers show up as an uppercase number
+                c = Character.toUpperCase(c);
+                //For each character, it checks the map to see if that character already
+                //exists on the map. If so, it increments the value associated with it by 1.
+                //Otherwise, it adds the character to the map and sets it's value to 1.
                 letterCount2.put(c, letterCount2.getOrDefault(c,0)+1);
             }
         }
+        //Returns hashmap.
         return letterCount2;
     }
 }
