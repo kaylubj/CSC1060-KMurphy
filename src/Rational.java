@@ -63,4 +63,24 @@ public class Rational {
         }
         return retVal;
     }
+
+    //Set the values
+    public void setDenominator(int denominator) {
+        if (denominator == 0) denominator = 1;
+        this.denominator = denominator;
+    }
+
+    public void setNumerator(int numerator) {
+        this.numerator = numerator;
+    }
+
+    //Retrieve those two values
+
+    public int getDenominator() {
+        return this.denominator;
+    }
+
+    public int getNumerator() {
+        return this.numerator;
+    }
 }

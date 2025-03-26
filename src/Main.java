@@ -19,6 +19,9 @@ public class Main {
         System.out.println(no_Params.invert());
         System.out.println(params.invert());
         System.out.println(no_Params.toString());
+        System.out.println("The values are: " + params.toString());
+        System.out.println("The decimal number is " + no_Params.toDouble());
+        System.out.println("The decimal number is " + params.toDouble());
         System.out.println(params.toString());
         System.out.println(no_Params.toDouble());
         System.out.println(params.toDouble());
@@ -26,5 +29,7 @@ public class Main {
         System.out.println(params.gcd());
         System.out.println(common.gcd());
         System.out.println(seventeen.gcd());
+        common.setDenominator(0);
+        System.out.println("The denominator is now " + common.getDenominator());
     }
 }
