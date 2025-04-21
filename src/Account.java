@@ -115,14 +115,4 @@ class Loan extends Account {
     public Loan(double initialBalance) {
         super(initialBalance);
     }
-
-    //The method to add interest:
-    @Override
-    public void addInterest() {
-        //Increases balance on what is owed by multiplying the current amount owed by its
-        //interest rate (/100 since it's a percentage), then adds that amount to the
-        //balance by calling the add method.
-        double interest = getBalance() * (getInterestRate() / 100);
-        add(interest); // You owe more now
-    }
 }
