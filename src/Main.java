@@ -3,7 +3,7 @@ Kaylub Murphy
 4/19/25
 CSC1060
 Wayne Cooke
-Purpose: Practice exceptions in programs by creating a program that solves the quadratic equation
+Purpose: To practice exceptions in programs by creating a program that solves the quadratic equation
  */
 import java.util.Scanner;
 
