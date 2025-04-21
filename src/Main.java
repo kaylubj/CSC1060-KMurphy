@@ -1,3 +1,11 @@
+/*
+Kaylub Murphy
+4/21/2025
+CSC1060
+Wayne Cooke
+Purpose: Learn inheritance by creating a program that simulates banking
+ */
+
 public class Main {
     public static void main(String[] args) {
         //This creates a new checking account with an initial balance of $100
