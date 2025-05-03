@@ -4,35 +4,52 @@ Kaylub Murphy
 CSC1060
 Wayne Cooke
 Purpose: Learn inheritance by creating a program that simulates banking
+
+Purpose: Add a FileIO to the Banking File
  */
+
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        //*******
+        Account master = new Account();
+        int temp = master.getNextAccountNumber();
+
+        CheckingAccount checks = new CheckingAccount("Me", temp, 122, 500);
+        checks.add(500);
+        checks.subtract(125.50);
+        checks.addInterest();
+        checks.printBalance();
+
+
+        //Grabs the next account number
+        int temp2 = checks.getNextAccountNumber();
         //This creates a new checking account with an initial balance of $100
-        CheckingAccount checking = new CheckingAccount(100);
-        //The interest rate on this checking account is 2.5 percent
-        checking.setInterestRate(2.5);
-        //Calls the addInterest() method under checking to add 2.5% interest to the $100
+        CheckingAccount checking = new CheckingAccount("You", temp2, 1.5, 1000);
+        checking.add(300);
+        //Calls the addInterest() method under checking to add 1.5% interest to the $1000
         checking.addInterest();
         //Calls the printBalance() method to print this new balance ($102.50)
         checking.printBalance();
 
-        //Creates a savings account with an initial balance of $500
-        SavingsAccount savings = new SavingsAccount(500);
-        //Sets the interest rate to 5%
-        savings.setInterestRate(5);
-        //Adds this interest to the balance...
-        savings.addInterest();
-        //And prints the new amount ( $525.00)
-        savings.printBalance();
-
+        int temp3 = checking.getNextAccountNumber();
         //Creates an account for a loan with an initial balance of $1000
-        Loan loan = new Loan(1000);
-        //The interest rate is 10%...
-        loan.setInterestRate(10);
+        Loan mortgage = new Loan("Someone else", temp3, 6.5, 200000);
+        //Adds debt to the mortgage
+        mortgage.add(10000);
+        //Subtracts debt to the mortgage
+        mortgage.subtract(15000);
         //Interest is added to the loan
-        loan.addInterest();
+        mortgage.addInterest();
         //And that new balance is printed ($1100.00)
-        loan.printBalance();
+        mortgage.printBalance();
+
+        //Has each account run the printTransactionHistory() method
+        checks.printTransactionHistory();
+        checking.printTransactionHistory();
+        mortgage.printTransactionHistory();
     }
 }
